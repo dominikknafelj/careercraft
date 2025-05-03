@@ -1,0 +1,10 @@
+# Typst output
+*.pdf
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor configuration
+.vscode/
+.idea/ 

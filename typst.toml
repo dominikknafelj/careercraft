@@ -1,0 +1,10 @@
+# typst.toml
+[package]
+name = "careercraft"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["D.Knafelj <dominik@knafel.io>"]
+license = "MIT"
+description = "Templates for crafting professional cover letters and resumes in US and German (DIN 5008) formats."
+repository = "https://github.com/yourusername/careercraft"
+keywords = ["cover-letter", "resume", "job-application", "US", "Germany", "DIN5008"]
