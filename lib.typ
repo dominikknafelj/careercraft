@@ -2,7 +2,7 @@
 #import "src/cover-letter.typ": cover-letter
 
 // Export templates for use
-#let job-application-suite = (
+#let careercraft = (
   cover-letter: cover-letter,
   resume: resume
 )

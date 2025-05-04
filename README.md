@@ -5,7 +5,8 @@ Templates for crafting professional cover letters and resumes in US and German (
 ## Features
 
 - US and German (DIN 5008) format support
-- Clean, professional design
+- Clean, professional design with customizable accent colors
+- ATS-friendly resume layout (needs improvement for A4 based resumes)
 - Customizable components
 - Easy-to-use Typst templates
 
@@ -13,6 +14,10 @@ Templates for crafting professional cover letters and resumes in US and German (
 
 - Resume template: ✅ Working
 - Cover letter template: ✅ Working
+
+## Credits
+
+The resume template design is inspired by [basic-typst-resume-template](https://github.com/stuxf/basic-typst-resume-template) by Stephen Xu, which provides an excellent foundation for ATS-friendly resume layouts.
 
 ## Installation
 
@@ -39,13 +44,26 @@ dependencies = ["careercraft"]
 
 // Create a resume
 #resume(
+  // Personal information
   applicant-name: "John Doe",
   applicant-address: "123 Main Street",
   applicant-city: "New York",
   applicant-postal-code: "10001",
   applicant-email: "john.doe@example.com",
   applicant-phone: "(555) 123-4567",
-  country: "US",
+  
+  // Online profiles (all optional)
+  github: "github.com/johndoe",
+  linkedin: "linkedin.com/in/johndoe",
+  personal-site: "johndoe.dev",
+  
+  // Formatting options
+  country: "US", // Use "DE" for German format
+  accent-color: rgb("#1a5fb4"), // Customize the accent color
+  author-position: left, // "left" or "center"
+  personal-info-position: left, // "left" or "center"
+  
+  // Content sections
   education: (
     (
       degree: "Bachelor of Science in Computer Science",
@@ -64,9 +82,28 @@ dependencies = ["careercraft"]
       description: "Full-stack development using modern technologies."
     ),
   ),
+  projects: (
+    (
+      name: "Personal Website",
+      role: "Developer",
+      dates: "2023",
+      description: "Built a personal portfolio website using modern web technologies."
+    ),
+  ),
+  certifications: (
+    (
+      name: "AWS Certified Developer",
+      organization: "Amazon Web Services",
+      date: "2022"
+    ),
+  ),
   skills: (
     "JavaScript", "TypeScript", "Python", "React"
-  )
+  ),
+  languages: (
+    "English (native)", "Spanish (intermediate)"
+  ),
+  interests: "Photography, hiking, and reading."
 )
 ```
 
@@ -108,7 +145,7 @@ dependencies = ["careercraft"]
 ## Examples
 
 See the examples directory for complete working examples:
-- `examples/resume-example.typ` - Example resume
+- `examples/resume-example.typ` - Example resume with all features
 - `examples/cover-letter-example.typ` - Cover letter examples in both US and German DIN 5008 formats
 
 ## License
